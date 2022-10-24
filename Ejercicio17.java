@@ -4,17 +4,16 @@ public class Ejercicio17 {
         Scanner s = new Scanner(System.in);
         System.out.print("Introduzca un número positivo: ");
         int n = s.nextInt();
-        int i = 1;
         int suma =0 ;
         if (n<0){
             System.out.print("El numero debe ser positivo");
         }
         if (n>0){
-            for(i=1; i<101; i++){
+            for(int i=n; i<n+100; i++){
                 suma = suma+i;
             }
             System.out.println(suma);
         }
-    s.close();
+        s.close();
     }
 }
