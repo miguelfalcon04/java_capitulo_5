@@ -6,12 +6,11 @@ public class Ejercicio12 {
         int n = sc.nextInt();
         int n2 =0;
         int n3 = 1;
-        int r = 0;
         for (int i=0; i<=n-1; i++){
-        r=n3;
-        System.out.println(n3);
-        n2 = n2+n3;
-        n3 = n2+n3;
+        int aux = n2;
+        n2=n3;
+        n3 = aux+n3;
+        System.out.println(" "+n3);
         sc.close();
         }
     }
