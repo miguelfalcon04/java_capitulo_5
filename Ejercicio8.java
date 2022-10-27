@@ -1,14 +1,12 @@
 import java.util.Scanner;
 public class Ejercicio8 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n2 = 0;
-        System.out.print("Tabla del: ");
-        int n = sc.nextInt(); 
-        do{
-            System.out.println(n +" * " + n2 + " = " + n*n2 );
-            n2++;
-        }while (n2<=10);
-        sc.close();
+        Scanner s = new Scanner(System.in);
+        System.out.print("Mostrar tabla del: ");
+        int n = s.nextInt();
+        for (int i =1; i<=10;i++){
+            System.out.println(n+" * "+i+" = "+n*i);
+        }
+        s.close();
     }
 }
