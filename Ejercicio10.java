@@ -1,21 +1,20 @@
 import java.util.Scanner;
 public class Ejercicio10 {
     public static void main(String[] args){
-        Scanner sc = new Scanner (System.in);
-        float suma = 0;
-        float valor = 0;
-        int i = 0;
+        Scanner s = new Scanner(System.in);
+        int nintroducido;
+        float div=0;
+        float suma=0;
         do{
-            System.out.print("Introduzca un número: ");
-            valor = sc.nextFloat();
-            if (valor>=0){
-                suma= suma+ valor;
-                i++;
+            System.out.print("Para finalizar introduzca un numero negativo: ");
+            nintroducido=s.nextInt();
+            if (nintroducido>0){
+                suma=suma+nintroducido;
+                div=div+1;
             }
-        } while(valor>=0);
-            if (i>0){
-                System.out.printf("La media es %f", suma/i);
-            }
-        sc.close();
+        }while(nintroducido>0);
+        float calculo=suma/div;
+        System.out.printf("La media de los numeros es: %.2f",calculo);
+        s.close();
     }
 }
