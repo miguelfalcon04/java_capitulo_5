@@ -2,20 +2,20 @@ import java.util.Scanner;
 public class Ejercicio13 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int npos = 0;
-        int nneg= 0;
-        for (int i=1; i<=10; i++){
-            System.out.print("Introduzca el " + i + "º numero: ");
-            int n = s.nextInt();
-            if (n>0){
-                npos++;
-            }
-            if (n<0){
-                nneg++;
-            }
-            }
-            System.out.print("Hay "+npos + " números positivos y "+ nneg + " números negativos");
-            s.close();
+        int mas = 0;
+        int menos=0;
+        for (int i=0; i<10;i++){
+        System.out.print("Introduzca un numero: ");
+        int n = s.nextInt();
+        if(n>0){
+            mas+=1;
         }
+        if (n<0){
+            menos+=1;
+        }
+        }
+        System.out.print("Hay "+ mas + " números positivos y "+ menos + " números negativos");
+        s.close();
     }
+}
 
