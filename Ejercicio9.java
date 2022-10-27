@@ -1,16 +1,15 @@
 import java.util.Scanner;
 public class Ejercicio9{
     public static void main (String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Introduzca un numero: ");
-        long numLeido = sc.nextLong();
-        long num = numLeido;
-        int i = 0;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Introduzca su numero: ");
+        long n = s.nextLong();
+        int i=1;
         do{
-            i++;
-            num/=10;
-        } while (num!=0);
-        System.out.printf("El número %d tine %d digitos", numLeido, i);
-        sc.close();
+            n/=10;
+            i+=1;
+        }while(n/10!=0);
+        System.out.print("Su numero tiene " +i+ " cifras");
+        s.close();
     }
 }
