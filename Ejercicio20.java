@@ -1,9 +1,8 @@
-
 import java.util.Scanner;
 public class Ejercicio20{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("De que altura quieres la piramide");
+        System.out.print("De que altura quieres la piramide: ");
         int altura = sc.nextInt();
         System.out.print("Introduzca el caracter deseado para crear la pirámide: ");
         String c = System.console().readLine();
