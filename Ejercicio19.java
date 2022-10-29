@@ -5,21 +5,15 @@ public class Ejercicio19 {
         System.out.print("Introduzca la altura de la piramide deseada: ");
         int a = s.nextInt();
         System.out.print("Introduzca el caracter deseado para crear la pirámide: ");
-        String r = System.console().readLine();
-        int base = 1;
-        int l = 1;
-        int espacio = a-1;
-        while (base<=a){
-            for (int i =1; i<= espacio; i++){
+        String r = s.next();
+        for(int i=1; i<=a;i++){
+            for(int e=i;e<a;e++){
                 System.out.print(" ");
             }
-            for (int i = 1; i<= l; i++){
+            for(int c=1;c<i*2;c++){
                 System.out.print(r);
             }
-        System.out.println();
-        base++;
-        espacio--;
-        l+=2;
+        System.out.println(" ");
         }
         s.close();
     }
