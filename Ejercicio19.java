@@ -7,13 +7,13 @@ public class Ejercicio19 {
         System.out.print("Introduzca el caracter deseado para crear la pirámide: ");
         String r = s.next();
         for(int i=1; i<=a;i++){
-            for(int e=i;e<a;e++){
+            for(int e=a-i;e>=0;e--){
                 System.out.print(" ");
             }
-            for(int c=1;c<i*2;c++){
+            for(int c=1;c<=(i*2)-1;c++){
                 System.out.print(r);
             }
-        System.out.println(" ");
+        System.out.println("");
         }
         s.close();
     }
