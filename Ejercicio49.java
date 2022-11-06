@@ -4,35 +4,39 @@ public class Ejercicio49 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Por favor, vaya introduciendo números enteros positivos. Para terminar, introduzca un número primo:");
         
-        boolean primo=true;
-        int i = 0;
+        boolean primo=false;
+        int cont = 0;
         int max = 0;
-        int min = 0;
+        int min = 999999999;
         int aux=0;
 
         do{
-            primo=true;
             int n = sc.nextInt();
-            i=i+1;
-            for(int j = 2; j < n ; j++){ //comprobamos si el número es primo
-                if ((n % j) == 0) { 
+            primo=true;
+            for(int i = 2; i < n ; i++){ //comprobamos si el número es primo
+                if ((n % i) == 0) { 
                     primo = false;
                 }
             }
+            if(!primo){
+                cont++;
+
             if(n>max){
-                n=max;
+                max=n;
             }
+
             if(n<min){
-                n=min;
+                min=n;
             }
 
             aux=aux+n;
+            }
 
-        }while(primo);
-        System.out.println("Ha introducido "+i+" números no primos");
-        System.out.println("Máximo: "+min);
-        System.out.println("Mínimo: "+max);
-        System.out.print("Media: "+(aux/i));
+        }while(!primo);
+        System.out.println("Ha introducido "+cont+" números no primos");
+        System.out.println("Máximo: "+max);
+        System.out.println("Mínimo: "+min);
+        System.out.printf("Media: %.2f ",((float)aux/(float)cont));
         sc.close();
     }
 }
