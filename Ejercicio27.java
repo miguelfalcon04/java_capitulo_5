@@ -11,10 +11,11 @@ public class Ejercicio27 {
         for(i=0; i<=n;i+=3){
             aux=aux+i;
             System.out.print(i+" ");
+            s.close();
         }
 
         System.out.println("");
         System.out.println("Suman en total "+aux);
-    s.close();
+        
     }
 }
