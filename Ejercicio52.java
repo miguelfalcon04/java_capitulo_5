@@ -15,7 +15,6 @@ public class Ejercicio52 {
             longitud++;
             n/=10;
         }
-        System.out.printf("Número volteado: %d   Longitud: %d\n",nvolteado,longitud);
         
         if(longitud>3){
             digito=nvolteado%10;
